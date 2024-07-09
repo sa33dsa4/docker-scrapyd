@@ -66,7 +66,7 @@ RUN set -xe \
     && rm -rf /var/lib/apt/lists/*
 
 COPY ./scrapyd.conf /etc/scrapyd/
-#VOLUME /etc/scrapyd/ /var/lib/scrapyd/
+VOLUME /etc/scrapyd/ /var/lib/scrapyd/
 EXPOSE 6800
 
 ENTRYPOINT ["tini", "--"]
