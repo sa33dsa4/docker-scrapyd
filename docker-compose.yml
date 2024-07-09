@@ -2,13 +2,9 @@ version: "3.8"
 services:
   scrapyd:
     image: easypi/scrapyd
-    environment:
-      - SCRAPYD_USERNAME=${SCRAPYD_USERNAME}
-      - SCRAPYD_PASSWORD=${SCRAPYD_PASSWORD}
     ports:
       - "6800:6800"
     volumes:
       - ./data:/var/lib/scrapyd
       - /usr/local/lib/python3.11/dist-packages
-      - ./scrapyd.conf:/etc/scrapyd/scrapyd.conf
     restart: unless-stopped
