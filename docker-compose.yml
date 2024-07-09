@@ -10,4 +10,5 @@ services:
     volumes:
       - ./data:/var/lib/scrapyd
       - /usr/local/lib/python3.11/dist-packages
+      - ./scrapyd.conf:/etc/scrapyd/scrapyd.conf
     restart: unless-stopped
